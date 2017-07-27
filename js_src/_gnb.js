@@ -6,14 +6,22 @@ $(function(){
 
   $('.gnb-depth1-link').on('mouseenter', function(){
 
-    $(this).next('.gnb-depth2').addClass('on');
+    $(this).next('.gnb-depth2-wrap').addClass('on');
 
   });
 
-  //$('.gnb-depth1-item').on('mouseleave', function(){
-  //
-  //  $(this).children('.gnb-depth2').css('display', 'none');
-  //
-  //});
+  $('.gnb-depth1-link').on('mouseleave', function(){
+
+    $(this).next('.gnb-depth2-wrap').removeClass('on');
+
+  });
+
+  $('.gnb-depth2-wrap').on('mouseenter', function(){
+    $(this).addClass('on');
+  });
+
+  $('.gnb-depth2-wrap').on('mouseleave', function(){
+    $(this).removeClass('on');
+  });
 
 });

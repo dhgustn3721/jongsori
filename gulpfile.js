@@ -60,6 +60,14 @@ gulp.task('gnb', function() {
       .pipe(gulp.dest('js/'));
 });
 
-gulp.task('jsconcat', ['gnb']);
+gulp.task('jsr_2_4_1', function() {
+  return gulp.src('js_src/*.js')
+      .pipe(sourcemaps.init())
+      .pipe(concat('jsr_2_4_1.js'))
+      .pipe(sourcemaps.write())
+      .pipe(gulp.dest('js/'));
+});
+
+gulp.task('jsconcat', ['gnb', 'jsr_2_4_1']);
 
 gulp.task('default', ['livereload', 'include', 'sass', 'jsconcat', 'watch']);
