@@ -20,8 +20,15 @@ $(function(){
     $(this).addClass('on');
   });
 
+
   $('.gnb-depth2-wrap').on('mouseleave', function(){
     $(this).removeClass('on');
+  });
+
+  $('.gnb-depth2-link').on('click', function(){
+
+    $(this).parents('.gnb-depth2-wrap').addClass('on');
+
   });
 
 });

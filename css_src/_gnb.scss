@@ -60,7 +60,7 @@
       top:0;
       left:140px;
       position:absolute;
-      transition:width .5s ease-out;
+      transition:width .3s ease-out;
       overflow: hidden;
 
       &.on{
@@ -138,6 +138,13 @@
     }
   }
 
+}
+
+.gnb.sub{
+  .gnb-depth2-wrap{
+    width:100px;
+    transition:none;
+  }
 }
 
 .footer{
